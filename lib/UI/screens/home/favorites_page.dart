@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'package:project_app1/UI/screens/home/on%20clicked/new_subject.dart';
@@ -33,44 +34,51 @@ class FavoritePage extends StatelessWidget {
                     color: Color(0xffec704b)),
               ),
               subtitle: SizedBox(
-                  height: 650,
-                  width: double.infinity,
-                  child: GridView.extent(
-                    maxCrossAxisExtent: 650,
-                    childAspectRatio: 2,
-                    children: List.generate(
-                        10,
-                        (index) => InkWell(
-                              onTap: () {Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (context) => NewSubjectPage()));},
-                              child: Card(
-                                  color: Color(0xffdcc1ff),
-                                  child: Stack(
-                                    alignment: Alignment.center,
-                                    children: [
-                                      Positioned(
-                                        top: 5,
-                                        right: 5,
-                                        child: IconButton(
-                                          icon: Icon(Icons.favorite),
-                                          color: Colors.black,
-                                          iconSize: 27,
-                                          onPressed: () {},
-                                        ),
-                                      ),
-                                      Positioned(
-                                          child: Text(
-                                        'Subject Name',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.w500,
-                                            letterSpacing: .6,
-                                            fontSize: 21,
-                                            color: Colors.black),
-                                      ))
-                                    ],
-                                  )),
-                            )),
-                  )),
+                height: 650,
+                width: double.infinity,
+                child: GridView.extent(
+                  maxCrossAxisExtent: 650,
+                  childAspectRatio: 2,
+                  children: List.generate(
+                    10,
+                    (index) => InkWell(
+                      onTap: () {
+                        Get.to(() => NewSubjectPage());
+                        // Navigator.of(context).push(MaterialPageRoute(
+                        //     builder: (context) => NewSubjectPage()));
+                      },
+                      child: Card(
+                        color: Color(0xffdcc1ff),
+                        child: Stack(
+                          alignment: Alignment.center,
+                          children: [
+                            Positioned(
+                              top: 5,
+                              right: 5,
+                              child: IconButton(
+                                icon: Icon(Icons.favorite),
+                                color: Colors.black,
+                                iconSize: 27,
+                                onPressed: () {},
+                              ),
+                            ),
+                            Positioned(
+                              child: Text(
+                                'Subject Name',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w500,
+                                    letterSpacing: .6,
+                                    fontSize: 21,
+                                    color: Colors.black),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
             )
           ],
         ),

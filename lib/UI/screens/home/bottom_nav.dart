@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:project_app1/UI/screens/home/favorites_page.dart';
 import 'package:project_app1/UI/screens/home/home.dart';
 import 'package:project_app1/UI/screens/home/shared_notepage.dart';
@@ -23,23 +24,19 @@ class _BottomNavPage extends State<BottomNavPage> {
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home,
-            ),
+            icon: FaIcon(FontAwesomeIcons.houseCrack),
             label: "Home",
+            activeIcon: FaIcon(FontAwesomeIcons.houseUser)
           ),
           BottomNavigationBarItem(
-              activeIcon: Icon(
-                Icons.favorite,
-              ),
-              icon: Icon(Icons.favorite_border_outlined,
+              activeIcon: FaIcon(FontAwesomeIcons.heartPulse),
+
+              icon: FaIcon(FontAwesomeIcons.heartCrack,
                   color: Color(0xffdcc1ff)),
               label: "Favorites"),
           BottomNavigationBarItem(
-              activeIcon: Icon(
-                Icons.menu_book_rounded,
-              ),
-              icon: Icon(Icons.menu_book_rounded, color: Color(0xffdcc1ff)),
+              activeIcon: FaIcon(FontAwesomeIcons.bookOpenReader),
+              icon: FaIcon(FontAwesomeIcons.bookOpen),
               label: 'Shared Notes'),
         ],
         onTap: (tapIndex) {
