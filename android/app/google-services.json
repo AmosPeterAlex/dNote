@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "277725000121",
+    "project_id": "amos-project-1-b1fa2",
+    "storage_bucket": "amos-project-1-b1fa2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:277725000121:android:51663cbb79840184f54668",
+        "android_client_info": {
+          "package_name": "com.amos.project_app1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPygqAau-CZDQAQCWLGDiMimMgOt33Gm4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
