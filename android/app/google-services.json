@@ -12,7 +12,20 @@
           "package_name": "com.amos.project_app1"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "277725000121-35u8k6abm0v3tvqf7ipdea7c1998v28h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.amos.project_app1",
+            "certificate_hash": "173099d010116bc6c3f3d2ebbacafe94bf4c1aea"
+          }
+        },
+        {
+          "client_id": "277725000121-uutq9v9bvr755mu9gbacigt4t6tg8h1f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCPygqAau-CZDQAQCWLGDiMimMgOt33Gm4"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "277725000121-uutq9v9bvr755mu9gbacigt4t6tg8h1f.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "277725000121-i9d4ahtoliao87o6n93k52648c8fnp1s.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.amos.projectApp1.RunnerTests"
+              }
+            }
+          ]
         }
       }
     }

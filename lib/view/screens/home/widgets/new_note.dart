@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:project_app1/UI/screens/home/on%20clicked/new_widget.dart';
-import 'package:project_app1/UI/utils/my_colors.dart';
+import 'package:project_app1/view/screens/home/widgets/new_widget.dart';
+import 'package:project_app1/view/utils/my_colors.dart';
 
 class NewNotes extends StatelessWidget {
-  // const NewNotes({super.key});
+  // const NewNotes({super.key});view
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: Colors.black,
       appBar: AppBar(
         title: Text('Subject Name'),
         backgroundColor: Colors.black,
@@ -17,7 +16,8 @@ class NewNotes extends StatelessWidget {
         centerTitle: true,
       ),
       body: SingleChildScrollView(
-        child: Center(child: SectionWidget(text1: 'Section Name', text2: 'Comment')),
+        child: Center(
+            child: SectionWidget(text1: 'Section Name', text2: 'Comment')),
       ),
     );
   }

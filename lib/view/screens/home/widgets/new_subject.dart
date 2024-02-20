@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:project_app1/UI/screens/home/on%20clicked/new_widget.dart';
-import 'package:project_app1/UI/utils/my_colors.dart';
+import 'package:project_app1/view/screens/home/widgets/new_widget.dart';
+import 'package:project_app1/view/utils/my_colors.dart';
 
 class NewSubjectPage extends StatelessWidget {
   // const NewSubjectPage({super.key});
@@ -19,10 +19,11 @@ class NewSubjectPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Center(
           child: Column(
-              children: List.generate(
-            10,
-            (index) => SectionWidget(text1: 'SECTION 1', text2: 'Comment'),
-          )),
+            children: List.generate(
+              10,
+              (index) => SectionWidget(text1: 'SECTION 1', text2: 'Comment'),
+            ),
+          ),
         ),
       ),
       floatingActionButton: FloatingActionButton(

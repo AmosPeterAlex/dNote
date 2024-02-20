@@ -6,8 +6,6 @@ import 'package:project_app1/controller/splash_controller.dart';
 class SplashPg extends StatelessWidget {
   // const SplashPg({super.key});
 
-
-
   @override
   Widget build(BuildContext context) {
     return GetBuilder<SplashController>(

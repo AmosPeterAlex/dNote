@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:project_app1/UI/screens/login/login_or_signup.dart';
+import 'package:project_app1/view/screens/login/login_or_signup.dart';
 
 class SplashController extends GetxController {
   @override

@@ -1,21 +1,21 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import 'package:google_fonts/google_fonts.dart';
 
-import 'package:project_app1/UI/screens/home/on%20clicked/new_subject.dart';
+import 'package:project_app1/view/screens/home/widgets/new_subject.dart';
+import 'package:project_app1/view/utils/my_colors.dart';
+
+import '../../../controller/note_controller.dart';
 
 class FavoritePage extends StatelessWidget {
   // const FavoritePage({super.key});
-
+  final NoteBookController controller = Get.find<NoteBookController>();
   @override
   Widget build(BuildContext context) {
-    final List<Color> colors = [
-      Color(0xffdcc1ff),
-      Color(0xffec704b),
-      Color(0xfff5f378)
-    ];
+    final List<Color> colors = [myLavender, myRed, myYellow];
     List<Color> shuffledColors = [];
 
     shuffledColors = List.from(colors)..shuffle(Random());
@@ -33,6 +33,57 @@ class FavoritePage extends StatelessWidget {
           ),
         ),
       ),
+      body: Obx(() => ListView.builder(
+            itemCount:
+                controller.noteBooks.where((notebook) => notebook.isFav).length,
+            itemBuilder: (context, index) {
+              final favoriteNotebooks = controller.noteBooks
+                  .where((notebook) => notebook.isFav)
+                  .toList();
+              final notebook = favoriteNotebooks[index];
+              Color color1 = shuffledColors[index % colors.length];
+              return InkWell(
+                onTap: () {
+                  Get.to(NewSubjectPage());
+                },
+                child: SizedBox(
+                  height: 150,
+                  child: Card(
+                    color: color1,
+                    child: Stack(
+                      alignment: Alignment.center,
+                      children: [
+                        Positioned(
+                          top: 5,
+                          right: 5,
+                          child: IconButton(
+                            icon: Icon(Icons.favorite),
+                            color: Colors.red,
+                            // Adjust color based on favorite status
+                            iconSize: 27,
+                            onPressed: () => controller.toggleFavorite(
+                                notebook), // Toggle favorite status
+                          ),
+                        ),
+                        Positioned(
+                          child: Text(
+                            notebook.subjectName,
+                            style: TextStyle(
+                                fontWeight: FontWeight.w500,
+                                letterSpacing: .6,
+                                fontSize: 21,
+                                color: Colors.black),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              );
+            },
+          )),
+    );
+    /*
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(
@@ -101,5 +152,7 @@ class FavoritePage extends StatelessWidget {
         ),
       ),
     );
+
+       */
   }
 }
