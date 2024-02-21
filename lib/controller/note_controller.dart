@@ -60,9 +60,11 @@ class NoteBookController extends GetxController {
   void toggleFavorite(NoteBook notebook) {
     notebook.isFav = !notebook.isFav;
     if (notebook.isFav) {
+      // addToFavorites(notebook);
       favoriteNoteBooks.add(notebook); // Add to favorites list
     } else {
-      favoriteNoteBooks.remove(notebook); // Remove from favorites list
+      removeFromFavorites(notebook);
+      // favoriteNoteBooks.remove(notebook); // Remove from favorites list
     }
   }
 
@@ -80,6 +82,7 @@ class NoteBookController extends GetxController {
     }
   }
    */
+
   // Function to add a NoteBook to the favorites list
   void addToFavorites(NoteBook notebook) {
     // Check if the notebook is already in the favorites list
@@ -90,6 +93,19 @@ class NoteBookController extends GetxController {
 
   // Function to remove a NoteBook from the favorites list
   void removeFromFavorites(NoteBook notebook) {
-    noteBooks.remove(notebook);
+    noteBooks.remove(notebook); //engane aa enkil home il ninum delete akunu
+    // favoriteNoteBooks.remove(notebook);
   }
+
+  /*
+//added by refering video
+  void addToFavorites(NoteBook noteBook) {
+    favoriteNoteBooks.add(noteBook);
+  }
+
+  void removeFromFavorites(NoteBook noteBook) {
+    noteBooks.remove(noteBook);
+  }
+
+   */
 }
