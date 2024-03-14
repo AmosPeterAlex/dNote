@@ -8,6 +8,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:project_app1/view/screens/home/widgets/new_subject.dart';
 import 'package:project_app1/view/utils/my_colors.dart';
 
+import '../../../controller/new_note_controller.dart';
 import '../../../controller/note_controller.dart';
 
 class FavoritePage extends StatelessWidget {

@@ -9,9 +9,11 @@ import 'package:project_app1/view/screens/home/widgets/new_subject.dart';
 import 'package:project_app1/view/screens/login/login_options.dart';
 import 'package:project_app1/view/utils/my_colors.dart';
 
+import '../../../controller/new_note_controller.dart';
 import '../../../controller/note_controller.dart';
 import '../../../firebase_my_auth_func.dart';
 
+//new note controller, note controller comment aki vechit ola anu
 class HomePage extends StatelessWidget {
   // const HomePage({super.key});
   final NoteBookController controller = Get.find<NoteBookController>();
@@ -50,55 +52,74 @@ class HomePage extends StatelessWidget {
       floatingActionButton: CustomFloatingActionButton(onPressed: () {
         Get.to(NewNotes());
       }),
-      body: Obx(() => ListView.builder(
-            itemCount: controller.noteBooks.length,
-            itemBuilder: (context, index) {
-              final notebook = controller.noteBooks[index];
-              Color color1 = shuffledColors1[index % colors.length];
-              return InkWell(
-                onTap: () {
-                  Get.to(NewSubjectPage());
-                },
-                child: Container(
-                  height: 150,
-                  child: Card(
-                    color: color1,
-                    child: Stack(
-                      alignment: Alignment.center,
-                      children: [
-                        Positioned(
-                          top: 5,
-                          right: 5,
-                          child: IconButton(
-                            icon: Icon(notebook.isFav
-                                ? Icons.favorite
-                                : Icons.favorite_border),
-                            color: Colors.black,
-                            iconSize: 27,
-                            onPressed: () {
-                              print('added to fav pressed');
-                              controller.toggleFavorite(notebook);
-                            },
-                          ),
-                        ),
-                        Positioned(
-                          child: Text(
-                            notebook.subjectName,
-                            // Use the subjectName property from the notebook
-                            style: TextStyle(
-                                fontWeight: FontWeight.w500,
-                                letterSpacing: .6,
-                                fontSize: 21,
-                                color: Colors.black),
-                          ),
-                        )
-                      ],
+      //obx njn remove akiyt um work akunnu
+      body: ListView.builder(
+        itemCount: controller.noteBooks.length,
+        itemBuilder: (context, index) {
+          final notebook = controller.noteBooks[index];
+          Color color1 = shuffledColors1[index % colors.length];
+          return InkWell(
+            child: Container(
+              height: 150,
+              child: Card(
+                color: color1,
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    Positioned(
+                      top: 5,
+                      right: 5,
+                      // child: Obx(() => IconButton(
+                      //     onPressed: () {
+                      //       print('On pressed');
+                      //       controller.toggleFavorite(notebook);
+                      //     },
+                      //     icon: controller.isIconFav.value
+                      //         ? Icon(Icons.favorite_border)
+                      //         : Icon(Icons.favorite))),
+                      child: IconButton(
+                        icon: Icon(notebook.isFav
+                            ? Icons.favorite
+                            : Icons.favorite_border),
+                        color: Colors.black,
+                        iconSize: 27,
+                        onPressed: () {
+                          print('added to fav pressed');
+                          controller.toggleFavorite(notebook);
+                        },
+                      ),
                     ),
-                  ),
+                    // Positioned(
+                    //     left: 20,
+                    //     bottom: 20,
+                    //     child: IconButton(
+                    //         icon: Icon(notebook.isFav
+                    //             ? Icons.favorite
+                    //             : Icons.favorite_border),
+                    //         color: Colors.black,
+                    //         iconSize: 27,
+                    //         onPressed: () =>
+                    //             controller.toggleIcon(notebook),
+                    //       ),
+                    //     ),
+                    Positioned(
+                      child: Text(
+                        notebook.subjectName,
+                        // Use the subjectName property from the notebook
+                        style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            letterSpacing: .6,
+                            fontSize: 21,
+                            color: Colors.black),
+                      ),
+                    )
+                  ],
                 ),
-              );
-            },
-          )),
+              ),
+            ),
+          );
+        },
+      ),
     );
   }
 }
