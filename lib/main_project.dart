@@ -30,5 +30,6 @@ TODO:
  dark mode switching must ano?
  portrait to landscape
  logout inu mune snackbar
+ full updation to folder
 
  */
