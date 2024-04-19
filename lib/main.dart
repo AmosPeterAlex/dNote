@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:project_app1/material_app_theme.dart';
 
 import 'controller/new_note_controller.dart';
-import 'controller/note_controller.dart';
 import 'controller/obscure_controller.dart';
 
 void main() async {
