@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:project_app1/core/constants/color_constants.dart';
 import 'package:project_app1/view/screens/home/bottom_nav.dart';
 import 'package:project_app1/view/screens/login/login_options.dart';
 import 'package:project_app1/view/screens/login/widgets/my_material_button.dart';
@@ -34,7 +35,7 @@ class _CreateAccountState extends State<CreateAccount> {
               ),
               Text(
                 '  Create\nAccount',
-                style: GoogleFonts.cinzel(fontSize: 42, color: myLavender),
+                style: GoogleFonts.cinzel(fontSize: 42, color: ColorConstants.lavender),
               ),
               SizedBox(
                 height: 50,
@@ -152,7 +153,7 @@ class _CreateAccountState extends State<CreateAccount> {
                       }
                     });
                   },
-                  myColor: myYellow),
+                  myColor: ColorConstants.yellow),
 
               // MaterialButton(
               //   onPressed: () {
@@ -206,7 +207,7 @@ class _CreateAccountState extends State<CreateAccount> {
                           'Log in',
                           style: TextStyle(
                               fontStyle: FontStyle.italic,
-                              color: myLavender,
+                              color: ColorConstants.lavender,
                               fontSize: 16,
                               fontWeight: FontWeight.w500,
                               letterSpacing: .3),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:project_app1/core/constants/color_constants.dart';
 import 'package:project_app1/view/screens/home/bottom_nav.dart';
 import 'package:project_app1/view/screens/login/create_acc.dart';
 import 'package:project_app1/view/screens/login/widgets/my_material_button.dart';
@@ -37,14 +38,19 @@ class _LoginPageState extends State<LoginPage> {
                 ' Hello\nAgain!',
                 style: GoogleFonts.cinzel(
                   fontSize: 42,
-                  color: myLavender,
+                  color: ColorConstants.lavender,
                 ),
               ),
               SizedBox(
                 height: 130,
               ),
-              MyTextField(textFieldHeading: 'Email', controller: emailController),
-              MyTextField(textFieldHeading: 'Password', controller: passController,isPassword: true,),
+              MyTextField(
+                  textFieldHeading: 'Email', controller: emailController),
+              MyTextField(
+                textFieldHeading: 'Password',
+                controller: passController,
+                isPassword: true,
+              ),
               // ListTile(
               //   title: Text(
               //     ' Email',
@@ -54,18 +60,18 @@ class _LoginPageState extends State<LoginPage> {
               //         fontWeight: FontWeight.w400,
               //         letterSpacing: 1.7),
               //   ),
-                // subtitle: MyTextField(controller: emailController),
-                // subtitle: TextField(
-                //   controller: emailController,
-                //   decoration: InputDecoration(
-                //     filled: true,
-                //     fillColor: Colors.white,
-                //     border: OutlineInputBorder(
-                //       borderSide: BorderSide.none,
-                //       borderRadius: BorderRadius.circular(35),
-                //     ),
-                //   ),
-                // ),
+              // subtitle: MyTextField(controller: emailController),
+              // subtitle: TextField(
+              //   controller: emailController,
+              //   decoration: InputDecoration(
+              //     filled: true,
+              //     fillColor: Colors.white,
+              //     border: OutlineInputBorder(
+              //       borderSide: BorderSide.none,
+              //       borderRadius: BorderRadius.circular(35),
+              //     ),
+              //   ),
+              // ),
               // ),
               // ListTile(
               //   title: Text(
@@ -121,12 +127,11 @@ class _LoginPageState extends State<LoginPage> {
                         Get.to(() => BottomNavPage());
                       } else {
                         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                            backgroundColor: Colors.red,
-                            content: Text(value)));
+                            backgroundColor: Colors.red, content: Text(value)));
                       }
                     });
                   },
-                  myColor: myYellow),
+                  myColor: ColorConstants.yellow),
               // MaterialButton(
               //   onPressed: () {
               //     String email = emailController.text.trim();
@@ -174,7 +179,7 @@ class _LoginPageState extends State<LoginPage> {
                           'Create Account',
                           style: TextStyle(
                               fontStyle: FontStyle.italic,
-                              color: myLavender,
+                              color: ColorConstants.lavender,
                               fontSize: 16,
                               fontWeight: FontWeight.w500,
                               letterSpacing: .3),
@@ -196,7 +201,7 @@ class _LoginPageState extends State<LoginPage> {
                   "Reset",
                   style: TextStyle(
                       fontSize: 16,
-                      color: myLavender,
+                      color: ColorConstants.lavender,
                       fontStyle: FontStyle.italic),
                 ),
                 onTap: () {},

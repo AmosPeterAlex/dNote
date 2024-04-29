@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:project_app1/core/constants/color_constants.dart';
 import 'package:project_app1/view/screens/home/widgets/new_floating_button.dart';
 import 'package:project_app1/view/screens/home/widgets/new_note.dart';
 import 'package:project_app1/view/screens/home/widgets/new_subject.dart';
@@ -20,7 +21,11 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final List<Color> colors = [myLavender, myRed, myYellow];
+    final List<Color> colors = [
+      ColorConstants.lavender,
+      ColorConstants.red,
+      ColorConstants.yellow
+    ];
     List<Color> shuffledColors = [];
     List<Color> shuffledColors1 = [];
 
@@ -34,7 +39,7 @@ class HomePage extends StatelessWidget {
         centerTitle: true,
         title: Text(
           'Hello, Amos',
-          style: GoogleFonts.lato(fontSize: 30, color: myLavender),
+          style: GoogleFonts.lato(fontSize: 30, color: ColorConstants.lavender),
         ),
         actions: [
           IconButton(

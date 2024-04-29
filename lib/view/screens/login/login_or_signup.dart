@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:project_app1/core/constants/color_constants.dart';
 import 'package:project_app1/view/screens/login/create_acc.dart';
 import 'package:project_app1/view/screens/login/login_options.dart';
 import 'package:project_app1/view/screens/login/widgets/my_material_button.dart';
@@ -24,7 +25,7 @@ class LoginOrSignup extends StatelessWidget {
                 style: GoogleFonts.cinzel(
                     //nala oru font kity ila
                     fontSize: 40,
-                    color: myLavender)),
+                    color: ColorConstants.lavender)),
             SizedBox(
               height: 350,
             ),
@@ -33,7 +34,7 @@ class LoginOrSignup extends StatelessWidget {
                 buttonPressed: () {
                   Get.to(() => LoginOptions());
                 },
-                myColor: myYellow),
+                myColor: ColorConstants.yellow),
             // MaterialButton(
             //   onPressed: () {
             //     Get.to(() => LoginOptions());
@@ -54,7 +55,7 @@ class LoginOrSignup extends StatelessWidget {
                 buttonPressed: () {
                   Get.to(() => CreateAccount());
                 },
-                myColor: myLavender)
+                myColor: ColorConstants.lavender)
             // MaterialButton(
             //   onPressed: () {
             //     Get.to(

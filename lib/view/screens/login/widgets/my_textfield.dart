@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:project_app1/core/constants/color_constants.dart';
 
 import '../../../../controller/obscure_controller.dart';
 import '../../../utils/my_colors.dart';
@@ -26,7 +27,7 @@ class MyTextField extends StatelessWidget {
                 textFieldHeading,
                 style: GoogleFonts.asapCondensed(
                     fontSize: 22,
-                    color: myLavender,
+                    color: ColorConstants.lavender,
                     fontWeight: FontWeight.w400,
                     letterSpacing: 1.5),
               ),

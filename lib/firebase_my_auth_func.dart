@@ -1,13 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:project_app1/view/screens/home/bottom_nav.dart';
-import 'package:project_app1/view/screens/login/login_options.dart';
 
-/*
-
- */
 class FirebaseHelper {
   final FirebaseAuth auth = FirebaseAuth.instance;
   final GoogleSignIn googleSignIn = GoogleSignIn();

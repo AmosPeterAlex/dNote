@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:project_app1/core/constants/color_constants.dart';
 import 'package:project_app1/firebase_my_auth_func.dart';
 import 'package:project_app1/view/screens/login/create_acc.dart';
 import 'package:project_app1/view/screens/login/login_email.dart';
@@ -31,7 +32,7 @@ class LoginOptions extends StatelessWidget {
 
               Text(
                 'Log in\n  with', //google font req
-                style: GoogleFonts.cinzel(fontSize: 42, color: myLavender),
+                style: GoogleFonts.cinzel(fontSize: 42, color: ColorConstants.lavender),
               ),
               SizedBox(
                 height: 200,
@@ -39,7 +40,7 @@ class LoginOptions extends StatelessWidget {
               MyMaterialButton(
                   buttonText: 'Login with Email',
                   buttonPressed: () {Get.to(() => LoginPage());},
-                  myColor: myYellow),
+                  myColor: ColorConstants.yellow),
               // MaterialButton(
               //   onPressed: () {
               //     Get.to(() => LoginPage());
@@ -77,7 +78,7 @@ class LoginOptions extends StatelessWidget {
                       print('Google Sign-In failed');
                     }
                   },
-                  myColor: myRed),
+                  myColor: ColorConstants.red),
               // MaterialButton(
               //   onPressed: () async {
               //     UserCredential? userCredential =

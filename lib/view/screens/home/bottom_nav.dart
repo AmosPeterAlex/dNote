@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:project_app1/core/constants/color_constants.dart';
 import 'package:project_app1/view/screens/home/favorites_page.dart';
 import 'package:project_app1/view/screens/home/home.dart';
 import 'package:project_app1/view/screens/home/shared_notepage.dart';
@@ -18,9 +19,8 @@ class _BottomNavPage extends State<BottomNavPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
-
       bottomNavigationBar: Padding(
-        padding:  EdgeInsets.only(right: 15,left: 15,bottom: 15),
+        padding: EdgeInsets.only(right: 15, left: 15, bottom: 15),
         child: ClipRRect(
           clipBehavior: Clip.hardEdge,
           borderRadius: BorderRadius.circular(35),
@@ -50,11 +50,11 @@ class _BottomNavPage extends State<BottomNavPage> {
             selectedFontSize: 12,
             // selectedItemColor: Color(0xffdcc1ff),
             selectedIconTheme: IconThemeData(
-              color: myYellow,
+              color: ColorConstants.yellow,
               size: 28,
             ),
             unselectedFontSize: 16,
-            unselectedItemColor: myLavender,
+            unselectedItemColor: ColorConstants.lavender,
             showUnselectedLabels: true,
             // backgroundColor: myBlack,
             iconSize: 20,

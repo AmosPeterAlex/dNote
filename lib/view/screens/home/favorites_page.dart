@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'package:google_fonts/google_fonts.dart';
+import 'package:project_app1/core/constants/color_constants.dart';
 
 import 'package:project_app1/view/screens/home/widgets/new_subject.dart';
 import 'package:project_app1/view/utils/my_colors.dart';
@@ -14,17 +15,22 @@ import '../../../controller/note_controller.dart';
 class FavoritePage extends StatelessWidget {
   // const FavoritePage({super.key});
   final NoteBookController controller = Get.find<NoteBookController>();
+
   @override
   Widget build(BuildContext context) {
-    final List<Color> colors = [myLavender, myRed, myYellow];
+    final List<Color> colors = [
+      ColorConstants.lavender,
+      ColorConstants.red,
+      ColorConstants.yellow
+    ];
     List<Color> shuffledColors = [];
 
     shuffledColors = List.from(colors)..shuffle(Random());
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: ColorConstants.black,
       appBar: AppBar(
         toolbarHeight: 70,
-        backgroundColor: Colors.black,
+        backgroundColor: ColorConstants.black,
         centerTitle: true,
         title: Text(
           'Hello, Amos',

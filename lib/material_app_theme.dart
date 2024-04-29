@@ -16,9 +16,9 @@ class SNote extends StatelessWidget {
       title: 'd-Note App',
       theme: ThemeData(
           useMaterial3: true,
-          scaffoldBackgroundColor: myBlack,
+          scaffoldBackgroundColor: ColorConstants.black,
           bottomNavigationBarTheme: BottomNavigationBarThemeData(
-              backgroundColor: ColorConstants.myGrey)),
+              backgroundColor: ColorConstants.grey)),
       home: user == null ? SplashPg() : BottomNavPage(),
       debugShowCheckedModeBanner: false,
     );
